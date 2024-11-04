@@ -315,77 +315,6 @@
             }
         }
 
-        /*  let elementoAModificar = null;
-  
-          function modificarElemento(id) {
-              elementoAModificar = elementos.find(e => e.id == id);
-  
-              if (elementoAModificar) {
-                  mostrarFormularioABM();
-                  const tituloFormulario = document.getElementById('tituloFormulario');
-                  tituloFormulario.innerText = "MODIFICACIÓN";
-                  document.getElementById("botonAceptar").hidden = true;
-                  document.getElementById("botonEliminar").hidden = true;
-                  document.getElementById("botonModificar").hidden = false;
-                  document.getElementById("botonCancelar").hidden = false;
-                  document.getElementById('id').value = elementoAModificar.id;
-                  document.getElementById('id').disabled = true;
-                  document.getElementById('modelo').value = elementoAModificar.modelo;
-                  document.getElementById('anoFabricacion').value = elementoAModificar.anoFabricacion;
-                  document.getElementById('velMax').value = elementoAModificar.velMax;
-                  document.getElementById('cantidadPuertas').value = elementoAModificar.cantidadPuertas || 'N/A';
-                  document.getElementById('asientos').value = elementoAModificar.asientos || 'N/A';
-                  document.getElementById('carga').value = elementoAModificar.carga || 'N/A';
-                  document.getElementById('autonomia').value = elementoAModificar.autonomia || 'N/A';
-              }
-          }
-  
-          function modificar() {
-              mostrarSpinner();
-  
-              const elementoModificado = {
-                  id: document.getElementById('id').value,
-                  modelo: document.getElementById('modelo').value,
-                  anoFabricacion: document.getElementById('anoFabricacion').value,
-                  velMax: parseInt(document.getElementById('velMax').value),
-                  cantidadPuertas: parseFloat(document.getElementById('cantidadPuertas').value) || 0,
-                  asientos: parseFloat(document.getElementById('asientos').value) || 0,
-                  carga: parseFloat(document.getElementById('carga').value) || 0,
-                  autonomia: document.getElementById('autonomia').value || 0
-              };
-  
-              fetch('https://examenesutn.vercel.app/api/VehiculoAutoCamion', {
-                  method: 'PUT',
-                  headers: {
-                      'Content-Type': 'application/json'
-                  },
-                  body: JSON.stringify(elementoModificado)
-              })
-                  .then(response => {
-                      ocultarSpinner();
-  
-                      if (!response.ok) {
-                          throw new Error('No se pudo realizar la operación');
-                      }
-  
-                      return response.json();
-                  })
-                  .then(data => {
-                      console.log(data);
-                      Object.assign(elementoAModificar, elementoModificado, { id: data.id });
-                      ocultarFormularioABM();
-                      mostrarFormularioLista();
-                  })
-                  .catch(error => {
-                      alert(error.message);
-                      ocultarFormularioABM();
-                      mostrarFormularioLista();
-                  });
-          }
-  */
-
-
-
         let elementoAModificar = null;
 
         function modificarElemento(id) {
@@ -484,7 +413,6 @@
                     if (!response.ok) {
                         throw new Error('No se pudo realizar la operación');
                     }
-                    return response.json();
                 })
                 .then(data => {
 

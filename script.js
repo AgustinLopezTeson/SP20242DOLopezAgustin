@@ -73,14 +73,14 @@ class Cliente extends Persona {
 }
 
 function mostrarSpinner() {
-    document.getElementById('spinner').style.display = 'flex'; // Muestra el spinner
+    document.getElementById('spinner').style.display = 'flex'; 
 
-    // Simula una operación que toma tiempo
+    
     setTimeout(function() {
-        ocultarSpinner(); // Oculta el spinner después de 3 segundos
-    }, 3000); // 3000 ms = 3 segundos
+        ocultarSpinner(); 
+    }, 3000); 
 }
 
 function ocultarSpinner() {
-    document.getElementById('spinner').style.display = 'none'; // Oculta el spinner
+    document.getElementById('spinner').style.display = 'none'; 
 }
