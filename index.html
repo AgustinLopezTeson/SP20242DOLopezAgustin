@@ -245,7 +245,7 @@
             };
 
             if (!nuevoElemento.modelo || !nuevoElemento.anoFabricacion || isNaN(nuevoElemento.velMax) || nuevoElemento.velMax <= 0) {
-                alert('Por favor, completa todos los campos y asegúrate de que la velocidad máxima sea mayor a 0.');
+                alert('Completa todos los campos y la velocidad tiene que ser mayor a 0.');
                 ocultarSpinner();
                 return;
             }
@@ -451,6 +451,8 @@
                 document.getElementById("botonModificar").hidden = true;
                 document.getElementById("botonEliminar").hidden = false;
                 document.getElementById("botonCancelar").hidden = false;
+
+
             }
         }
 
